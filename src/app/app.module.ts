@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { JwtModule } from '@auth0/angular-jwt';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +13,10 @@ import { GenresComponent } from './genres/genres.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieCardComponent } from './shared/components/movie-card/movie-card.component';
 import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
+
+import { ReactiveFormsModule,FormsModule } from "@angular/forms";
 
 //!this chunk is similar to attributes in c# (eg [ApiController])
 @NgModule({//!this turns the class into an angular module
@@ -21,13 +27,18 @@ import { MovieDetailsComponent } from './movies/movie-details/movie-details.comp
     GenresComponent,
     MoviesComponent,
     MovieCardComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    JwtModule
   ],
   providers: [],
   bootstrap: [AppComponent]

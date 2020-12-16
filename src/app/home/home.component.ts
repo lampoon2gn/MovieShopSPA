@@ -9,7 +9,7 @@ import { Movie } from '../shared/models/movie';
 })
 export class HomeComponent implements OnInit {
 
-  movies:Movie[];
+  movies:Movie[] | undefined;
   constructor(private movieService:MovieService) { }
 
   ngOnInit(): void {

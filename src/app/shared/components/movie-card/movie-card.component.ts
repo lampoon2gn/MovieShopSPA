@@ -9,7 +9,7 @@ import { Movie } from '../../models/movie';
 export class MovieCardComponent implements OnInit {
 
   //!parent will pass data using this property to use this component
-  @Input() movie:Movie;
+  @Input() movie:Movie | undefined;
 
   constructor() { }
 

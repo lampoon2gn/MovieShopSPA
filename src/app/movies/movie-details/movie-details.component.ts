@@ -10,8 +10,8 @@ import { Movie } from 'src/app/shared/models/movie';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  movieId:number;
-  movie:Movie;
+  movieId:number | undefined;
+  movie:Movie | undefined;
   constructor(private route: ActivatedRoute,private movieService:MovieService) { }
 
   ngOnInit(): void {

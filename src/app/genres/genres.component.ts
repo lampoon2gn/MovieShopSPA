@@ -9,7 +9,7 @@ import { Genre } from '../shared/models/genre';
 })
 export class GenresComponent implements OnInit {
 
-  genres: Genre[];
+  genres: Genre[] | undefined;
   title="Genre View";
   constructor(private genreService: GenreService) {}
   ngOnInit(): void {
